@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:name], 
       email: params[:email], 
-      password: params[:password]
+      password: params[:password_digest]
     )
     @user.save!
     render :show
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @user.name = params[:name] || @user.name
     @user.email = params[:email] || @user.email
-    @user.password = params[:password] || @user.password
+    @user.password = params[:password_digest] || @user.password
   
     @user.save!
     render :show
