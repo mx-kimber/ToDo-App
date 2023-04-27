@@ -6,6 +6,7 @@ get "/tasks" => "tasks#index"
 
 resources :users
 
+
 resources :categories
 
 end 
