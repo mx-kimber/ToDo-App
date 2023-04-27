@@ -1,0 +1,2 @@
+class AddCategoryImageToTable < ApplicationRecord
+end
