@@ -1,0 +1,13 @@
+<h1>Look at all the Categories</h1>
+
+<p>Sung to the tune of "Eleanor Rigby"</p>
+
+<% @categories.each do |category| %>
+<a href="categories/<%= category.name %>">Click to go to this category's page</a>
+
+  <h2><%= category.name %></h2>
+   <hr>
+  
+
+
+<% end %>
