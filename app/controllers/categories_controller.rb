@@ -18,4 +18,12 @@ class CategoriesController < ApplicationController
     render :show
   end 
 
+
+  def create 
+    category = Category.create(
+      name: params["name"], 
+    )
+
+    render :show
+  end 
 end
