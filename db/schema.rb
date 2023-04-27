@@ -7,6 +7,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_27_184417) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
+    t.integer "user_id"
+    t.integer "category_id"
   end
 
   create_table "tasks", force: :cascade do |t|

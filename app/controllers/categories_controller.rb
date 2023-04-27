@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
 
   def index 
     @categories = Category.all 
-    render json:{message: "Is this working?"}
+    render :index
   end 
 
   def create
