@@ -20,10 +20,16 @@ class CategoriesController < ApplicationController
 
 
   def create 
-    category = Category.create(
+    @category = Category.create(
       name: params["name"], 
     )
 
     render :show
+  end 
+
+  def update
+    @category = Category.update(
+    name: params[:name] || category.name,
+  )
   end 
 end
