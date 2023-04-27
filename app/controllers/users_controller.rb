@@ -12,16 +12,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(
       name: params[:name], 
-      email: params[:age], 
+      email: params[:email], 
       password: params[:password]
     )
-
-    if @user.save
-      render :show
-    else
-      render json: {errors: @user.errors.full_messages}, status: :unprocessable_entity
-    end
-
+    @user.save!
+    render :show
   end
   
   def update
@@ -30,13 +25,8 @@ class UsersController < ApplicationController
     @user.email = params[:email] || @user.email
     @user.password = params[:password] || @user.password
   
-    
-    if @user.save
-      render :show
-    else
-      render json: {errors: @user.errors.full_messages}, status: :unprocessable_entity
-    end
-    
+    @user.save!
+    render :show
   end
   
   def destroy
