@@ -4,4 +4,9 @@ get "/tasks" => "tasks#index"
 
 
 get "/users" => "users#index"
-end
+
+
+resources :categories
+
+end 
+
